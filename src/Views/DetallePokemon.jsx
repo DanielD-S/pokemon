@@ -41,15 +41,14 @@ const DPokemon = () => {
         <div  style={{color:'white'}} className='datosPersonajes'>
           <p><strong>Nombre: </strong> <i>{pokemon.name}</i></p>
           {
-               pokemon.types?.map(t => (
-                
-                  <p  key={t.type.name} className="text-capitalize"><strong>Tipo:</strong> {t.type.name}
+               pokemon.types?.map(tipo => (
+                  <p  key={tipo.type.name}><strong>Tipo:</strong> {tipo.type.name}
                   </p>
                 ))
               }
               {
                 pokemon.stats?.map(stat => (
-                  <p key={stat.stat.name} className="text-capitalize">
+                  <p key={stat.stat.name}>
                     {stat.stat.name}: <strong>{stat.base_stat}</strong>
                   </p>
                 ))
